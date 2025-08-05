@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AsskFans - Part of the AssKingForIt Network</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-master">
+
+<!-- HEADER -->
+<header>
+  <div class="logo" id="logo-container">
+    <img src="assets/master-bates-logo.png" alt="Master Bates" id="logo-img" class="logo-img" />
+    <h1 id="site-title">AsskFans</h1>
+  </div>
+  <nav>
+    <button data-filter="all">All</button>
+    <button data-filter="straight">Straight</button>
+    <button data-filter="gay">Gay</button>
+    <button data-filter="ai">AI</button>
+    <button data-filter="top">Top Rated</button>
+    <button data-filter="new">New</button>
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section id="hero">
+  <video id="hero-video" autoplay loop muted>
+    <source src="assets/trailer-straight.mp4" type="video/mp4" />
+  </video>
+  <div class="hero-buttons">
+    <a href="https://www.paypal.me/sonofthewatchers" target="_blank" class="button">💸 Tribute the Throne</a>
+    <a href="https://buy.stripe.com/YOUR-STRIPE-LINK" target="_blank" class="button">💳 Tip the King</a>
+  </div>
+</section>
+
+<!-- TOP BANNER AD -->
+<div class="banner-ad top">
+  <script type="text/javascript" src="https://adserver.juicyads.com/adshow.php?adzone=YOUR-BANNER-ZONE-ID"></script>
+</div>
+
+<!-- FEATURED PERFORMERS -->
+<section id="performer-grid">
+  <h2>Featured Performers</h2>
+  <div class="grid" id="performer-list">
+    <!-- 24 Performer cards will be dynamically built by JS -->
+  </div>
+</section>
+
+<!-- MID-GRID BANNER -->
+<div class="banner-ad mid">
+  <script type="text/javascript" src="https://adserver.juicyads.com/adshow.php?adzone=YOUR-BANNER-ZONE-ID"></script>
+</div>
+
+<!-- VIDEO OVERLAY -->
+<div id="video-overlay" class="hidden">
+  <div class="overlay-content">
+    <span id="close-overlay">&times;</span>
+    <video id="overlay-video" controls autoplay loop>
+      <source src="" type="video/mp4">
+    </video>
+    <div class="overlay-buttons">
+      <a href="https://www.paypal.me/sonofthewatchers" target="_blank" class="button">💸 Tip via PayPal</a>
+      <a href="https://buy.stripe.com/YOUR-STRIPE-LINK" target="_blank" class="button">💳 Tip via Stripe</a>
+    </div>
+  </div>
+</div>
+
+<!-- AI PROMPT BOX -->
+<section id="ai-request">
+  <h2>Assk for It</h2>
+  <form id="ai-form">
+    <input type="text" id="desire" placeholder="Tell us what you want to see..." required />
+    <button type="submit">Assk</button>
+  </form>
+  <div id="ai-response"></div>
+</section>
+
+<!-- LIVE CAMS -->
+<section id="live-cams">
+  <h2>Live Cams</h2>
+  <iframe src="https://chaturbate.com/in/?track=default&tour=hr8m&campaign=publicembed"
+          width="100%" height="600" frameborder="0" scrolling="no" allowfullscreen>
+  </iframe>
+</section>
+
+<!-- EXTRA SECTIONS -->
+<section id="recently-active">
+  <h2>Recently Active</h2>
+  <ul id="recent-list">
+    <!-- Filled by JS -->
+  </ul>
+</section>
+
+<section id="top-fans">
+  <h2>Top Fans</h2>
+  <ol id="fan-list">
+    <!-- Filled by JS -->
+  </ol>
+</section>
+
+<section id="trending-tags">
+  <h2>Trending Tags</h2>
+  <div id="tag-list">
+    <!-- Filled by JS -->
+  </div>
+</section>
+
+<!-- INTERSTITIAL BUTTON -->
+<div class="center">
+  <a href="#" class="button ad-link">🎥 Free Show (Ad Trigger)</a>
+</div>
+
+<!-- PERFORMER SIGNUP -->
+<section id="performer-signup">
+  <h2>Become a Creator on AsskFans</h2>
+  <p>Earn money sharing your hottest content. Apply below.</p>
+  <form action="mailto:YOUR-EMAIL@domain.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required><br>
+    <input type="email" name="email" placeholder="Your Email" required><br>
+    <textarea name="about" placeholder="Tell us about your content..." required></textarea><br>
+    <button type="submit" class="button">Apply Now</button>
+  </form>
+</section>
+
+<!-- FOOTER BANNER -->
+<div class="banner-ad footer">
+  <script type="text/javascript" src="https://adserver.juicyads.com/adshow.php?adzone=YOUR-BANNER-ZONE-ID"></script>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 AsskFans.com | Part of the AssKingForIt Network</p>
+  <p><a href="#">Terms</a> | <a href="#">Privacy</a> | <a href="#">2257 Compliance</a></p>
+  <p>All performers are over 18. This site contains adult material.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
