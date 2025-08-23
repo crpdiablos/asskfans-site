@@ -1,0 +1,24 @@
+'use client';
+import { useRouter } from 'next/navigation';
+
+export default function AgeGate(){
+  const r = useRouter();
+  function accept(){
+    document.cookie = 'assk_age_ok=1; Path=/; Max-Age='+(60*60*24*365);
+    r.replace('/login');
+  }
+  function decline(){ r.replace('https://google.com'); }
+
+  return (
+    <main style={{minHeight:'100dvh',display:'grid',placeItems:'center',background:'#000',color:'#fff',padding:24}}>
+      <div style={{maxWidth:480,border:'1px solid rgba(255,255,255,0.15)',borderRadius:16,padding:24}}>
+        <h1 style={{marginTop:0}}>Adults Only (18+)</h1>
+        <p>By entering, you confirm you are 18+ and agree to our Terms & Privacy.</p>
+        <div style={{display:'flex',gap:8,marginTop:12}}>
+          <button onClick={accept} style={{padding:'10px 16px',borderRadius:12,background:'#fff',color:'#000'}}>I’m 18+ Enter</button>
+          <button onClick={decline} style={{padding:'10px 16px',borderRadius:12,background:'transparent',border:'1px solid #555',color:'#fff'}}>Leave</button>
+        </div>
+      </div>
+    </main>
+  );
+}
