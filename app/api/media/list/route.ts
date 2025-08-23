@@ -1,10 +1,12 @@
 import { NextResponse } from 'next/server';
-import { CLIPS, clipUrl } from '@/lib/config';
-export async function GET(){
-  const out: Record<string,string> = {};
-  (Object.keys(CLIPS) as (keyof typeof CLIPS)[]).forEach(k=>{
-    const file = CLIPS[k]; const bare = file.replace(/\.mp4$/,''); const url = clipUrl(k as any);
-    out[bare]=url; out[file]=url;
-  });
-  return NextResponse.json(out);
+
+export async function GET() {
+  try {
+    const res = await fetch(new URL('/media/manifest.json', process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'));
+    const manifest = await res.json();
+    return NextResponse.json(manifest);
+  } catch {
+    // fallback: empty manifest
+    return NextResponse.json({});
+  }
 }
