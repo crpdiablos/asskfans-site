@@ -8,7 +8,6 @@ export default function AgeGate(){
     r.replace('/login');
   }
   function decline(){ r.replace('https://google.com'); }
-
   return (
     <main style={{minHeight:'100dvh',display:'grid',placeItems:'center',background:'#000',color:'#fff',padding:24}}>
       <div style={{maxWidth:480,border:'1px solid rgba(255,255,255,0.15)',borderRadius:16,padding:24}}>
